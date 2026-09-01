@@ -16,6 +16,13 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+# Load .env for keys when running locally
+try:
+    from dotenv import load_dotenv
+    load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
+except Exception:
+    pass
+
 from flask import Flask, jsonify, render_template_string
 
 app = Flask(__name__)

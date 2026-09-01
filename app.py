@@ -25,6 +25,13 @@ import hashlib
 import re
 from colorama import init, Fore, Back, Style
 
+# Load .env for API keys (FIRECRAWL_API_KEY, APIFY_TOKEN, TRAINED_MODEL_PATH, etc.)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(dotenv_path=Path(__file__).resolve().parent / ".env")
+except Exception:
+    pass
+
 # Initialize colorama for cross-platform colored output
 init(autoreset=True)
 

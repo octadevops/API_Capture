@@ -154,6 +154,13 @@ Desktop.ini
 *.key
 FIRECRAWL_API_KEY
 APIFY_TOKEN
+.streamlit/secrets.toml
+
+# Trained model artifacts (large) — commit only if <100MB or use Git LFS / HF Hub
+models/cse_finbert/
+models/*.bin
+models/*.safetensors
+*.safetensors
 
 # Temp
 tmp/
